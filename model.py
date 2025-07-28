@@ -8,7 +8,7 @@ import streamlit as st
 st.title("Time Series Forecasting for a stock Using XGBoost with Train - Test Split and Lag Features")
 
 with st.sidebar.form("Details of Stock"):
-    st.write("Enetr the Details:")
+    st.write("Enter the Details:")
     stock = st.text_input("Enter the stock name: (eg AAPL)", value="AAPL")
     start_date = st.date_input("Enter the Start Date: ", value="2020-01-01")
     end_date = st.date_input("Enter the End Date: ", value = "2021-01-01")
