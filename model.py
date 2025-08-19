@@ -30,7 +30,7 @@ if submitted:
 
     plt.figure()
     plt.plot(data["Close"], label = f"{ticker[0]}")
-    plt.title(f"{ticker} Stock Price")
+    plt.title(f"{ticker[0]} Stock Price")
     plt.xlabel("Date")
     plt.ylabel("Closing Price")
     plt.legend()
@@ -83,4 +83,5 @@ if submitted:
 
 
     st.write("© Krish Jariwala. All Rights Reserved.")
+
 
