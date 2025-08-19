@@ -32,6 +32,7 @@ if submitted:
     plt.plot(data["Close"], label = f"{ticker[0]}")
     plt.title(f"{ticker[0]} Stock Price")
     plt.xlabel("Date")
+    plt.xticks(rotation=90)
     plt.ylabel("Closing Price")
     plt.legend()
     st.pyplot(plt.gcf())
@@ -83,5 +84,6 @@ if submitted:
 
 
     st.write("© Krish Jariwala. All Rights Reserved.")
+
 
 
