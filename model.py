@@ -22,7 +22,7 @@ if submitted:
         df = yf.download(tickers = ticker, start = start_date, end = end_date)
     except Exception as e:
         st.write("Failed to Download. Please try again in some time.")
-    # df.to_csv(f"{ticker[0][:-3]}.csv")
+    
     data = df.copy()
     data['Close_lag1'] = data['Close'].shift(1)
     data['Volume_lag1'] = data['Volume'].shift(1)
@@ -30,7 +30,7 @@ if submitted:
 
     plt.figure()
     plt.plot(data["Close"], label = f"{ticker[0]}")
-    plt.title(f"{ticker[0][:-3]} Stock Price")
+    plt.title(f"{ticker} Stock Price")
     plt.xlabel("Date")
     plt.ylabel("Closing Price")
     plt.legend()
@@ -42,7 +42,7 @@ if submitted:
     plt.figure()
     plt.plot(train_data["Close"], label = "Training Data")
     plt.plot(test_data["Close"], label = "Test Data")
-    plt.title("train-Test Split")
+    plt.title("Train-Test Split")
     plt.xlabel("Date")
     plt.xticks(rotation=90)
     plt.ylabel("Closing Price")
@@ -83,3 +83,4 @@ if submitted:
 
 
     st.write("© Krish Jariwala. All Rights Reserved.")
+
