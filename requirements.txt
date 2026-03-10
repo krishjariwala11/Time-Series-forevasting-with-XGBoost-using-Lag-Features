@@ -5,3 +5,5 @@ numpy
 xgboost
 streamlit
 scikit-learn
+altair<5
+standard-imghdr
